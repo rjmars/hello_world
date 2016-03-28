@@ -7,7 +7,9 @@ def number_guess(p=None):
         p=range_hi/2
     reply = raw_input("Is your number {0}? Reply with 'yes,' 'higher,' or 'lower.'".format(p))
     if reply == "yes":
-        print "Cool! I'm the best."
+        print "Cool! I'm the best. Wanna play again? Pick a new number and press 'Enter' when you're ready!"
+        raw_input()
+        number_guess()
         return
     if reply == "higher":
         number_range = (p + 1, number_range[1])
@@ -28,3 +30,5 @@ ready to play, press 'Enter.'""".format(rawr_cute(), range_lo, range_hi)
 raw_input()
 
 number_guess()
+
+# Make the game ask to repeat the game at the end.
